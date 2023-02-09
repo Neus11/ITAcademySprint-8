@@ -2,7 +2,7 @@
   <div>
     <nav>
       <router-link to="/">HOME</router-link> |
-      <router-link to="/about">STARSHIPS</router-link>
+      <router-link to="/starships">SPACESHIPS</router-link>
     </nav>
     <router-view />
   </div>
@@ -33,6 +33,6 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: rgb(165, 157, 136);
+  color: rgb(65, 65, 65);
 }
 </style>

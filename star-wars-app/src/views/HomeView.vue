@@ -3,23 +3,24 @@
     <hr>
     <img alt="StarWars logo" src="../assets/STAR-WARS-9.jpg">
     <hr>
-    <SpaceShip />
+    <h3> Welcome to StarWars World, may be the force be with you. </h3>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import SpaceShip from '@/components/SpaceShip'
 
 export default {
   name: 'HomeView',
   components: {
-    SpaceShip
   }
 }
 </script>
 
 <style scoped>
+h3 {
+  color: aliceblue;
+}
+
 hr {
   color:white;
 }
