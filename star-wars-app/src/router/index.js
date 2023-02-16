@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue';
+import store from '@/store';
 
 const routes = [
   {
@@ -10,7 +11,14 @@ const routes = [
   {
     path: '/starships',
     name: 'starships',
-    component: () => import('../views/SpaceShipView.vue')
+    component: () => import('../views/SpaceShipView.vue'),
+    beforeEnter: (to, from, next) => {
+      if(store.state.authentic == false) {
+        next(false);
+      } else {
+        next();
+      }
+    }
   },
   {
     path: '/starships/:id',

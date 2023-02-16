@@ -1,9 +1,9 @@
 <template>
   <div class="home">
     <hr>
-    <img alt="StarWars logo" src="../assets/STAR-WARS-9.jpg">
-    <hr>
-    <h3> Welcome to StarWars World, may be the force be with you. </h3>
+    <div>
+      <h3> Welcome to StarWars World, may be the force be with you. </h3>
+    </div>
   </div>
 </template>
 
@@ -17,6 +17,7 @@ export default {
 </script>
 
 <style scoped>
+
 h3 {
   color: aliceblue;
 }
@@ -29,7 +30,4 @@ div {
   background-color: black;
 }
 
-img {
-  width: 30%;
-}
 </style>
