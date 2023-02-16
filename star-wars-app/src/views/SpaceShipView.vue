@@ -1,8 +1,5 @@
     <template>
         <div class="home">
-        <hr>
-        <img alt="StarWars logo" src="../assets/STAR-WARS-9.jpg">
-        <hr>
         <SpaceShip />
         </div>
     </template>

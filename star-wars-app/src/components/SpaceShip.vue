@@ -8,6 +8,9 @@
           {{ item.model }} 
         </router-link>
       </div>
+      <div>
+        <button class="loadButton" @click="loadMoreShips">MORE SHIPS</button>
+      </div>
   </div>
 </template>
 
@@ -18,15 +21,20 @@ import { mapState } from 'vuex';
 export default {
   data() {
     return {
+      page: 1
     }
   },
   methods: {
+    loadMoreShips() {
+      this.$store.commit('loadMoreShips');
+      this.$store.dispatch('fetchStarships', this.$store.getters.getNextPage)
+    }
   },
   computed: {
     ...mapState(['starshipsList'])
   },
   created() {
-    this.$store.dispatch('fetchStarships');
+    this.$store.dispatch('fetchStarships', this.page);
   }
 }
 
@@ -39,12 +47,22 @@ export default {
   padding: 1rem;
   background-color: rgb(49, 49, 49);
   color: white;
+  font-family: 'Consolas';
 }
 
 a {
   text-decoration: none;
   color: white;
   background-color: rgb(49, 49, 49);
+}
+
+.loadButton {
+  background-color: grey;
+  width: 10rem;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
 </style>
